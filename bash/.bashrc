@@ -18,6 +18,8 @@ else
   export EDITOR="/usr/bin/nano"
 fi
 
+export SAL_USE_VCLPLUGIN=gtk3
+
 export GREP_COLOR="1;33"
 export LESS="-R"
 export LS_COLORS="rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:";
@@ -31,6 +33,7 @@ alias grep='grep --colour=auto'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify -lhA'
 alias valgrind-profiler='valgrind --tool=callgrind'
 alias ssh-agent-start='eval $(ssh-agent) && ssh-add'
+alias calib='pkill kiod5 ; calibre --with-library "/mnt/nas/mnt/Data/Shared/Knihovna/"'
 alias screenshot='echo "Waiting 2 seconds..." && sleep 2 && import -window root ./screenshot.png'
 alias ssh-ips='journalctl -u sshd | grep "[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}\.[0-9]\{1,3\}" -o | sort -u'
 alias git-sub-dirty='git submodule foreach git status --porcelain | grep "M "'
@@ -54,7 +57,7 @@ alias pac-which='pacman -Qo'           # Checks which package holds file
 
 # PACAUR aliases.
 alias aur-ins='pikaur -S'
-alias aur-upg='pikaur -Syu --edit'
+alias aur-upg='pikaur -Syu --noedit --nodiff'
 alias aur-upg-devel='pikaur -Syu --devel --edit'
 
 # Prints out files not owned by any package.
