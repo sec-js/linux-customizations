@@ -31,7 +31,6 @@ alias more='less'
 alias df='df -h'
 alias grep='grep --colour=auto'
 alias ls='ls --color=auto --human-readable --group-directories-first --classify -lhA'
-alias valgrind-profiler='valgrind --tool=callgrind'
 alias ssh-agent-start='eval $(ssh-agent) && ssh-add'
 alias calib='pkill kiod5 ; calibre --with-library "/mnt/nas/mnt/Data/Shared/Knihovna/"'
 alias screenshot='echo "Waiting 2 seconds..." && sleep 2 && import -window root ./screenshot.png'
@@ -43,7 +42,6 @@ alias pac-upg='sudo pacman -Syu'       # Synchronize with repositories before up
 alias pac-upd='sudo pacman -Syy'       # Install specific package(s) from the repositories
 alias pac-ins='sudo pacman -S'         # Sync specific package
 alias pac-upp='sudo pacman -U'         # Upgrade package from file
-alias pac-rem='sudo pacman -R'         # Remove the specified package
 alias pac-del='sudo pacman -Rns'       # Remove the specified package(s), its configuration(s) and unneeded dependencies
 alias pac-inr='pacman -Si'             # Display information about a given package in the repositories
 alias pac-sea='pacman -Ss'             # Search for package(s) in the repositories
@@ -79,3 +77,5 @@ pac-unowned() {
 # Load powerbash.
 source ~/.martin/powerbash/powerbash.bash
 source ~/.martin/powerbash/utilities.bash
+
+PROMPT_COMMAND+=';history -w'
