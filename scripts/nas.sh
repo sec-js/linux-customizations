@@ -1,0 +1,2 @@
+sudo mount -t cifs "//192.168.44.150/Nas - Data" /mnt/nas-data -o username=martin,uid=$(id -u),gid=$(id -g),rw,nobrl,noperm
+sudo mount -t cifs "//192.168.44.150/Nas - Multimedia" /mnt/nas-multimedia -o username=martin,uid=$(id -u),gid=$(id -g),rw,nobrl,noperm
